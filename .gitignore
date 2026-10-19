@@ -1,6 +1,6 @@
 # created by virtualenv automatically
 
 .venv
-hand_gesture_data.csv
+resource/hand_gesture_data.csv
 .pkl
 .idea

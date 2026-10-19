@@ -73,7 +73,7 @@ finally:
     if data:
         df = pd.DataFrame(data)
 
-        csv_file = "hand_gesture_data.csv"
+        csv_file = "resource/hand_gesture_data.csv"
         # If the file exists, open it in append mode without writing the header.
         if os.path.exists(csv_file):
             df.to_csv(csv_file, mode='a', header=False, index=False)

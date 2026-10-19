@@ -6,7 +6,7 @@ import warnings
 warnings.filterwarnings("ignore", category=UserWarning)
 
 # Load the trained gesture recognition model from file
-with open("gesture_model_mlp.pkl", "rb") as f:
+with open("resource/gesture_model_mlp.pkl", "rb") as f:
     model = pickle.load(f)
 
 # Initialize MediaPipe hand detector

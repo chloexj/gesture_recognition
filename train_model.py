@@ -8,7 +8,7 @@ from sklearn.neural_network import MLPClassifier       # MLP
 import pickle              # Used to save the trained model locally
 
 # Load hand gesture data from CSV file
-df = pd.read_csv("hand_gesture_data.csv")
+df = pd.read_csv("resource/hand_gesture_data.csv")
 
 # Separate features (X) and labels (y)
 X = df.iloc[:, :-1]                   # All columns except the last are features
@@ -58,7 +58,7 @@ print("MLP Classification Report:\n", classification_report(y_test, mlp.predict(
 
 
 # save model
-with open("gesture_model_mlp.pkl", "wb") as f:
+with open("resource/gesture_model_mlp.pkl", "wb") as f:
     pickle.dump(mlp, f)
-print("Random Forest model saved to gesture_model_mlp.pkl")
+print("Model saved to gesture_model_mlp.pkl")
 

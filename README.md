@@ -1,13 +1,13 @@
 # 🖐️ Real-Time Hand Gesture Recognition with MediaPipe
 
-This project allows real-time hand gesture recognition using a webcam, powered by [MediaPipe](https://mediapipe.dev/) for hand landmark detection and a simple machine learning classifier (KNN) for gesture classification.
+This project enables real-time hand gesture recognition using a webcam. It uses [MediaPipe](https://mediapipe.dev/) for hand landmark detection and several machine learning classifiers (MLP, KNN, Random Forest, and SVM) for gesture classification.
 
 It supports:
 - Numeric gestures: `1`, `2`, `3`, `4`, `5`
 - Custom gestures: `👍` (good), `👌` (ok)
 
 ## 📸 Demo
-![Demo](gesture.gif)
+![Demo](media/gesture.gif)
 
 ---
 
@@ -15,7 +15,7 @@ It supports:
 - Live webcam input using OpenCV
 - Hand landmark extraction using MediaPipe (21 keypoints per hand)
 - Gesture data collection and CSV saving
-- Simple classifier training (KNN)
+- Classification model training (MLP, KNN, Random Forest, SVM)
 - Real-time gesture prediction and overlay display
 - Easily extendable with more gestures
 
@@ -59,7 +59,7 @@ Instructions:
 
 Each saved frame will store 63 values (21 keypoints × 3D) + 1 label.
 
-![Demo](gesture_collect.gif)
+![Demo](media/gesture_collect.gif)
 
 ### 3. Train the Classifier
 
@@ -67,7 +67,7 @@ Each saved frame will store 63 values (21 keypoints × 3D) + 1 label.
 python train_model.py
 ```
 
-This will load the CSV, train a KNN classifier, and save the model to `gesture_model.pkl`.
+This will load the CSV file, train four machine learning models (MLP, KNN, Random Forest, and SVM), and save the trained models as .pkl files.
 
 ### 4. Real-Time Prediction
 
@@ -81,10 +81,10 @@ Your webcam will open and show predicted gestures live on the screen.
 
 ## 📥Other Resources
 
-[Model I trained-KNN](https://drive.google.com/file/d/1zXLfWREJxeB_WoMbGbVZHWxcQc4tC56s/view?usp=drive_link)
+[Model I trained-KNN](resource/gesture_model_knn.pkl)
 
-[Model I trained-MLP](https://drive.google.com/file/d/1mJeIgKxZ1ZGb2F_nvmTQ4B9mgjYo7TzG/view?usp=drive_link)
+[Model I trained-MLP](resource/gesture_model_mlp.pkl)
 
-[Data I collected](https://drive.google.com/file/d/1rwz_Nib5BfTYvAwFfAleCFdFbeHAjJRq/view?usp=sharing)
+[Data I collected](resource/gesture_data.csv)
 
 [Hand Gesture Controlled PPT Page Turner Project](https://github.com/chloexj/PPT_page_turn)
